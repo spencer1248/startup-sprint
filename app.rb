@@ -14,10 +14,14 @@ class App < Sinatra::Base
     erb :team_page
   end
 
-  get '/invite_request' do
-    "Hello World"
+#   get '/invite' do
+#     "Hello World"
+#     erb :invite
+#   end
+  
+post '/invite' do
+  erb :invite
   end
-
  
   
   get '/' do
