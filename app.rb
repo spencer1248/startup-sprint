@@ -1,9 +1,24 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
+  
+  get '/home' do
+    erb :home 
+  end
+
+  get '/youtube' do
+    erb :youtube 
+  end
+
+   get '/team_page' do
+    erb :team_page
+  end
+
   get '/invite_request' do
     "Hello World"
   end
+
+ 
   
   get '/' do
     @error = params['error']
@@ -53,4 +68,5 @@ class App < Sinatra::Base
 
     erb :schedule
   end
+
 end
