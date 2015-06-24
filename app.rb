@@ -75,3 +75,11 @@ post '/invite' do
   end
 
 end
+
+def myMethod(num = 5)
+  if num %2 == 0
+    "even number"
+  else
+    "odd number"
+  end
+end
