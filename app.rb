@@ -10,9 +10,15 @@ class App < Sinatra::Base
     erb :youtube 
   end
 
+   get '/team_page' do
+    erb :team_page
+  end
+
   get '/invite_request' do
     "Hello World"
   end
+
+ 
   
   get '/' do
     @error = params['error']
