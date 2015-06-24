@@ -2,6 +2,10 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   
+  get '/home' do
+    erb :home 
+  end
+
   get '/youtube' do
     erb :youtube 
   end
