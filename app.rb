@@ -1,6 +1,10 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
+  get '/invite_request' do
+    "Hello World"
+  end
+  
   get '/' do
     @error = params['error']
     erb :home
