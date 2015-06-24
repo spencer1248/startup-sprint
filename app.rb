@@ -15,6 +15,7 @@ class App < Sinatra::Base
     erb :team_page
   end
 
+
 #   get '/invite' do
 #     "Hello World"
 #     erb :invite
@@ -27,7 +28,7 @@ post '/invite' do
   
   get '/' do
     @error = params['error']
-    erb :home
+    erb :splash
   end
 
   post '/subscribe' do
