@@ -1,6 +1,11 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
+  
+  get '/youtube' do
+    erb :youtube 
+  end
+
   get '/invite_request' do
     "Hello World"
   end
@@ -53,4 +58,5 @@ class App < Sinatra::Base
 
     erb :schedule
   end
+
 end
