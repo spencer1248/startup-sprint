@@ -74,6 +74,10 @@ post '/invite' do
     erb :schedule
   end
 
+  get '/rainbow' do
+    erb :rainbow 
+  end
+
 end
 
 def myMethod(num = 5)
