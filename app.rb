@@ -1,9 +1,34 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
+  
+  get '/home' do
+    @error = params['error']
+    erb :home 
+  end
+
+  get '/youtube' do
+    erb :youtube 
+  end
+
+   get '/team_page' do
+    erb :team_page
+  end
+
+
+#   get '/invite' do
+#     "Hello World"
+#     erb :invite
+#   end
+  
+post '/invite' do
+  erb :invite
+  end
+ 
+  
   get '/' do
     @error = params['error']
-    erb :home
+    erb :splash
   end
 
   post '/subscribe' do
@@ -48,6 +73,19 @@ class App < Sinatra::Base
     ]
 
     erb :schedule
+  end
+
+  get '/rainbow' do
+    erb :rainbow 
+  end
+
+end
+
+def myMethod(num = 5)
+  if num %2 == 0
+    "even number"
+  else
+    "odd number"
   end
 end
 

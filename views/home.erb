@@ -1,7 +1,7 @@
 <h1>Startup Sprint!</h1>
-<img src="images/learnco.jpg">
+<img src="images/learnco.png">
 
-<h3>Subscribe to the Stertup Sprint newsletter</h3>
+<h3>Subscribe to the Startup Sprint newsletter</h3>
 <% if @error == 'email' %>
   <p style="color: red;">Please enter a valid email</p>
 <% end %>
@@ -11,4 +11,10 @@
   <label for="email">Email</label>
   <input type="text" id="email" name="email" required>
   <input type="Submit">
+</form>
+<h3>Invite your friends!</h3>
+<form method=POST action="/invite">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" required>
+  <input type="Submit" name="Invite" value="Invite!"> 
 </form>
