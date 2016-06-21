@@ -23,6 +23,11 @@ class App < Sinatra::Base
     erb :rainbow
   end
 
+  get '/youtube' do
+    @error = params['error']
+    erb :youtube
+  end
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
