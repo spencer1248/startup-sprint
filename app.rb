@@ -2,14 +2,25 @@ require_relative 'config/environment'
 require 'rubygems'
 require 'sinatra'
 
-get '/home' do
-  redirect "/"
-end
-
 class App < Sinatra::Base
+  get '/home' do
+    @error = params['error']
+    redirect to('/')
+  end
+
   get '/' do
     @error = params['error']
     erb :home
+  end
+
+  get '/team' do
+    @error = params['error']
+    erb :team
+  end
+
+  get '/rainbow' do
+    @error = params['error']
+    erb :rainbow
   end
 
   post '/subscribe' do
