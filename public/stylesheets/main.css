@@ -88,7 +88,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   .column1 {
+       float:left;
+       width:250px;
+   }
 
+   .column2 {
+       float.right;
+       width:250px;
+   }
 
 
 
