@@ -14,7 +14,7 @@ class App < Sinatra::Base
     @error = params['error']
     erb :home
   end
-end
+
 
   get '/team' do
     @error = params['error']
