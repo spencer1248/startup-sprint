@@ -3,6 +3,7 @@ require_relative 'config/environment'
 class App < Sinatra::Base
   get '/' do
     @error = params['error']
+    @full_name = params['full_name']
     erb :home
   end
 
@@ -11,7 +12,7 @@ class App < Sinatra::Base
     @email = params[:email]
 
     if !@email.match(/.+@.+/)
-      redirect to('/?error=email')
+      redirect to('/?error=email&full_name='+@full_name)
     end
 
     erb :subscribe
