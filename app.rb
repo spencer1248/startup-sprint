@@ -75,6 +75,7 @@ class App < Sinatra::Base
 end
 
 class App < Sinatra::Base
+
   get '/fib/:n' do
     # TODO: implement an algorithm to calculate the fibonacci sequence at
     # the nth position and display
@@ -90,4 +91,13 @@ class App < Sinatra::Base
   def fib(n)
     # TODO: calculate fib
   end
+end
+
+def create
+@user=User.new(params[:full_name])
+if @user.save
+   redirect_to :action=>'index'
+else
+   render :action=>'new'  #you should render to fill fields after error message
+end
 end

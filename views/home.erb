@@ -5,6 +5,7 @@
 <% if @error == 'email' %>
   <p style="color: red;">Please enter a valid email</p>
 <% end %>
+
 <form method=POST action="/subscribe">
   <label for="full-name">Full Name</label>
   <input type="text" id="full-name" name="full_name" required>
