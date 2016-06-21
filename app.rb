@@ -3,15 +3,22 @@ require_relative 'config/environment'
 class App < Sinatra::Base
   get '/' do
     @error = params['error']
+    @full_name = params['full_name']
+    @city = params['city']
     erb :home
+  end
+
+  get '/home' do
+    redirect to('/')
   end
 
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
+    @city = params[:city]
 
     if !@email.match(/.+@.+/)
-      redirect to('/?error=email')
+      redirect to('/?error=email&full_name='+@full_name+'&city='+@city)
     end
 
     erb :subscribe
@@ -69,5 +76,27 @@ class App < Sinatra::Base
   end
   def fib(n)
     # TODO: calculate fib
+  end
+end
+
+# in app.rb
+class App
+  get '/youtube' do
+    "Hello World"
+    erb :youtube
+  end
+end
+
+class App
+  get '/training' do
+    "Hello World"
+      erb :training
+  end
+end
+
+class App
+  get '/reddit' do
+    "hello world"
+    erb :reddit
   end
 end
