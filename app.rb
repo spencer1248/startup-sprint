@@ -2,8 +2,10 @@ require_relative 'config/environment'
 require 'rubygems'
 require 'sinatra'
 
-get '/home' do
-  redirect to('/')
+class App
+  get '/home' do
+    "Hello World"
+  end
 end
 
 class App < Sinatra::Base
