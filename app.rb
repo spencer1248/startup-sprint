@@ -9,6 +9,7 @@ class App < Sinatra::Base
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
+    @city = params[:city]
 
     if !@email.match(/.+@.+/)
       redirect to('/?error=email')
@@ -49,6 +50,11 @@ class App < Sinatra::Base
 
     erb :schedule
   end
+
+  get '/youtube' do
+    erb :youtube
+  end
+  
 end
 
 class App < Sinatra::Base
