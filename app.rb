@@ -23,6 +23,8 @@ class App < Sinatra::Base
 
     @listings = []
 
+    @redditObj = JSON.parse(RestClient.get('http://reddit.com/.json'))
+
     erb :reddit
   end
 
