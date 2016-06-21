@@ -49,8 +49,12 @@ class App < Sinatra::Base
 
     erb :schedule
   end
-end
 
+  get '/rainbow' do
+    erb :rainbow
+  end
+  
+end
 class App < Sinatra::Base
   get '/fib/:n' do
     # TODO: implement an algorithm to calculate the fibonacci sequence at
@@ -63,7 +67,6 @@ class App < Sinatra::Base
     # separated names. Randomize this list of names and display it as an
     # ordered list (<ol>). 5 points
   end
-
   def fib(n)
     # TODO: calculate fib
   end
