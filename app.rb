@@ -21,6 +21,9 @@ class App < Sinatra::Base
     erb :subscribe
   end
 
+  get '/home' do
+    redirect to('/')
+  end
   
   get '/team' do
     erb :team
