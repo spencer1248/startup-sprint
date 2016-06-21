@@ -9,8 +9,6 @@ class App < Sinatra::Base
   end
 end
 
-  get
-
 class App < Sinatra::Base
   get '/' do
     @error = params['error']
