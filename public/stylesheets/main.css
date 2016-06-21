@@ -87,14 +87,51 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
+.container {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    padding:0;
+}
+.red {
+  background-color: red;
+  width: 100%;
+  height: 14%;
+  padding: 0;
+}
+.orange {
+  background-color: orange;
+  width: 100%;
+  height: 14%;
+}
+.yellow {
+  background-color: yellow;
+  width: 100%;
+  height: 14%;
+}
+.green {
+  background-color: green;
+  width: 100%;
+  height: 14%;
+}
+.blue {
+  background-color: blue;
+  width: 100%;
+  height: 14%;
+}
+.indigo {
+  background-color: indigo;
+  width: 100%;
+  height: 14%;
+}
+.violet {
+  background-color: violet;
+  width: 100%;
+  height: 14%;
+}
 
 
 

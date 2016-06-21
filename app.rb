@@ -58,7 +58,11 @@ class App < Sinatra::Base
   get '/youtube' do
     erb :youtube
   end
-  
+
+  get '/rainbow' do
+    erb :rainbow
+  end
+
 end
 
 class App < Sinatra::Base
