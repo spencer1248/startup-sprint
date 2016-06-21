@@ -83,3 +83,10 @@ class App
     erb :youtube
   end
 end
+
+class App
+  get '/training' do
+    "Hello World"
+    erb :training
+  end
+end
