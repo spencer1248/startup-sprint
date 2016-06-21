@@ -3,6 +3,9 @@ require_relative 'config/environment'
 class App < Sinatra::Base
   get '/' do
     @error = params['error']
+    @full_name = params['full_name']
+    @email = params['email']
+    @city = params['city']
     erb :home
   end
 
@@ -12,10 +15,14 @@ class App < Sinatra::Base
     @city = params[:city]
 
     if !@email.match(/.+@.+/)
-      redirect to('/?error=email')
+      redirect to('/?error=email' + '&full_name=' + @full_name + '&email=' + @email + '&city=' + @city)
     end
 
     erb :subscribe
+  end
+
+  get '/home' do
+    redirect to('/')
   end
 
   get '/team' do
@@ -61,6 +68,10 @@ class App < Sinatra::Base
 
   get '/youtube' do
     erb :youtube
+  end
+
+  get '/rainbow' do
+    erb :rainbow
   end
 
 end
