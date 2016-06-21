@@ -87,6 +87,13 @@ end
 class App
   get '/training' do
     "Hello World"
-    erb :training
+      erb :training
+  end
+end
+
+class App
+  get '/reddit' do
+    "hello world"
+    erb :reddit
   end
 end
