@@ -1,7 +1,8 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
-  get '/' do
+  
+  get '/home' do
     @error = params['error']
     erb :home
   end
@@ -9,6 +10,7 @@ class App < Sinatra::Base
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
+    @city = params[:city]
 
     if !@email.match(/.+@.+/)
       redirect to('/?error=email')
@@ -17,9 +19,19 @@ class App < Sinatra::Base
     erb :subscribe
   end
 
+  get '/youtube' do
+    erb :youtube
+  end
+
+  get '/rainbow' do
+    erb :rainbow
+
+  end
+
   get '/reddit' do
     # TODO: we can probably get the listings with something like:
     # JSON.parse(RestClient.get('http://reddit.com/.json'))
+    # http://www.reddit.com/r/subreddit/new.json?sort=new
 
     @listings = []
 
@@ -53,9 +65,7 @@ end
 
 class App < Sinatra::Base
   get '/fib/:n' do
-    # TODO: implement an algorithm to calculate the fibonacci sequence at
-    # the nth position and display
-    # (4) points
+    fib(4)
   end
 
   get '/team-randomizer' do
@@ -65,6 +75,12 @@ class App < Sinatra::Base
   end
 
   def fib(n)
-    # TODO: calculate fib
+    if n == 0
+      if n == 1
+        n
+      else
+        fib(n-1) + fib(n-2)
+      end
+    end
   end
 end
