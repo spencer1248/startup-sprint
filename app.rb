@@ -9,24 +9,32 @@ class App < Sinatra::Base
     @error = params['error']
     redirect to('/')
   end
-end
 
-class App < Sinatra::Base
   get '/' do
     @error = params['error']
     erb :home
   end
 end
 
-class App < Sinatra::Base
   get '/team' do
     @error = params['error']
     erb :team
   end
 
+  get '/rainbow' do
+    @error = params['error']
+    erb :rainbow
+  end
+
+  get '/youtube' do
+    @error = params['error']
+    erb :youtube
+  end
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
+    @city = params[:city]
 
     if !@email.match(/.+@.+/)
       redirect to('/?error=email')
@@ -76,6 +84,7 @@ class App < Sinatra::Base
 end
 
 class App < Sinatra::Base
+
   get '/fib/:n' do
     # TODO: implement an algorithm to calculate the fibonacci sequence at
     # the nth position and display
@@ -91,4 +100,13 @@ class App < Sinatra::Base
   def fib(n)
     # TODO: calculate fib
   end
+end
+
+def create
+@user=User.new(params[:full_name])
+if @user.save
+   redirect_to :action=>'index'
+else
+   render :action=>'new'  #you should render to fill fields after error message
+end
 end
