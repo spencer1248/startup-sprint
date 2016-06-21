@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Welcome!</title>
+
+<style type="text/CSS">
+body {
+  background-image: url("images/sam.jpg");
+  background-size: cover;
+}
+h8 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  top:45px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom:20;
+  padding-top:20;
+  text-shadow: 2px 2px 4px #000000;
+}
+p1 {
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  text-align: center;
+}
+button {
+    background-color: #730505; /* Firebrick */
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width:100%;
+    height:45px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    opacity:0.6;
+    font-weight: bold;
+}
+</style>
+
+<script type="text/javascript">
+
+window.onload=timeout;
+function timeout(){
+window.setTimeout("redirect()",3000)}
+var div = document.getElementById("mybutton");
+  // Prints: function onclick(event) { alert('old') }
+//  div.onclick = redirect();
+function redirect(){
+window.location="/"
+return}
+
+</script>
+
+</head>
+<body>
+<body onload="timeout()">
+  <span class="s1"><div class="splash fade-in">
+  </span>  <h8>FLATIRON SCHOOL + <br> VENTURE FOR AMERICA</h8>
+    <p1><form>
+    <button id="mybutton" type="submit" value="Continue to Website" onclick="return redirect();">Continue to Website</button>
+  </form></p1>
+  </div>
+
+<br>
+
+
+
+</body>
+</html>
