@@ -88,13 +88,36 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.column {
+  display: inline-block;
+}
 
+#content {
+  left:0;
+  top:0;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  background-image: url("https://www.entrepreneur.com/dbimages/article/venture-for-america-founder-andrew-yang-2.jpg");
+  background-size: 150%;
+  background-position:top;
+}
 
+#content h1 {
+  color: #800000;
+  margin-left: 20px;
+  margin-right: auto;
+  /*margin-top: 200px;*/
+  font-size: 5em;
+}
 
-
-
-
-
+#content a {
+  margin-left: 50px;
+  text-decoration: none;
+  color:blue;
+  font-size: 2em;
+  font-family: sans-serif;
+}
 
 
 
