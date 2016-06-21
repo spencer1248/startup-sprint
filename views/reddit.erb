@@ -1,7 +1,10 @@
 <div>
-  <div class="column">
+  <div>
     <h3>Reddit Feed</h3>
     <ul>
+      <% @listings.each do |item| %>
+      <li><%= item %></li>
+      <% end %>
     </ul>
   </div>
 </div>
