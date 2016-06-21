@@ -4,7 +4,8 @@ require 'sinatra'
 
 class App < Sinatra::Base
   get '/home' do
-    "Hello World"
+    @error = params['error']
+    redirect to('/')
   end
 end
 
