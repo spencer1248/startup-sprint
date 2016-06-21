@@ -15,6 +15,12 @@ class App < Sinatra::Base
     erb :home
   end
 
+class App < Sinatra::Base
+  get '/team' do
+    @error = params['error']
+    erb :team
+  end
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
