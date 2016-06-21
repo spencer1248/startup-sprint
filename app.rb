@@ -8,10 +8,10 @@ class App < Sinatra::Base
     erb :home
   end
 
-  get '/home' do 
+  get '/home' do
     redirect to('/')
   end
-  
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
@@ -73,5 +73,13 @@ class App < Sinatra::Base
 
   def fib(n)
     # TODO: calculate fib
+  end
+end
+
+# in app.rb
+class App
+  get '/youtube' do
+    "Hello World"
+    erb :youtube
   end
 end
