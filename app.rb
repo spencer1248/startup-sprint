@@ -3,7 +3,7 @@ require 'rubygems'
 require 'sinatra'
 
 get '/home' do
-  redirect to ('/')
+  redirect to('/')
 end
 
 class App < Sinatra::Base
