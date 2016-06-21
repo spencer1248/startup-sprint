@@ -1,4 +1,10 @@
 require_relative 'config/environment'
+require 'rubygems'
+require 'sinatra'
+
+get '/home' do
+  redirect "/"
+end
 
 class App < Sinatra::Base
   get '/' do
