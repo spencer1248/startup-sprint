@@ -7,18 +7,20 @@ class App < Sinatra::Base
     @error = params['error']
     redirect to('/')
   end
-end
 
-class App < Sinatra::Base
   get '/' do
     @error = params['error']
     erb :home
   end
 
-class App < Sinatra::Base
   get '/team' do
     @error = params['error']
     erb :team
+  end
+
+  get '/rainbow' do
+    @error = params['error']
+    erb :rainbow
   end
 
   post '/subscribe' do
