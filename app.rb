@@ -6,6 +6,10 @@ class App < Sinatra::Base
     erb :home
   end
 
+  get '/rainbow' do
+    erb :rainbow
+  end
+
   get '/youtube' do
     erb :youtube
   end
