@@ -6,6 +6,11 @@ class App < Sinatra::Base
     erb :home
   end
 
+
+  get '/home' do
+    redirect '/'
+  end
+    
   get '/youtube' do
     erb :youtube
   end
