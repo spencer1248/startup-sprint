@@ -3,6 +3,10 @@ require_relative 'config/environment'
 class App < Sinatra::Base
   get '/' do
     @error = params['error']
+    erb :splashpage
+  end
+
+  get '/home' do
     erb :home
   end
 
