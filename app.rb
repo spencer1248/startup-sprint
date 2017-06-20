@@ -6,6 +6,14 @@ class App < Sinatra::Base
     erb :home
   end
 
+  get '/youtube' do
+    erb :youtube
+  end
+
+  get '/rainbow' do
+    erb :rainbow
+  end
+
   post '/subscribe' do
     @full_name = params[:full_name]
     @email = params[:email]
